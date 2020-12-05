@@ -1,0 +1,29 @@
+{
+  "linterOptions": {
+    "include": ["src/**/*.ts"]
+  },
+  "extends": [
+    "tslint-config-standard",
+    "tslint-etc"
+  ],
+  "rules": {
+    "no-unused-declaration": true,
+    "await-promise": false,
+    "no-floating-promises": false,
+    "no-unnecessary-qualifier": false,
+    "no-empty": false,
+    "no-unused-variable": true,
+    "ordered-imports": [true],
+    "nx-enforce-module-boundaries": [
+      true,
+      {
+        "enforceBuildableLibDependency": true,
+        "allow": [],
+        "depConstraints": [{
+          "sourceTag": "*",
+          "onlyDependOnLibsWithTags": ["*"]
+        }]
+      }
+    ]
+  }
+}
